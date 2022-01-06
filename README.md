@@ -1,7 +1,13 @@
 # Demo
+<details>
+
+<summary> Watch Video </summary>
+
 This example demonstrates specific IDs being filtered out; the first 3 are accepted while the last 2 are filtered.
 
 https://user-images.githubusercontent.com/74833839/148348464-fb7494e2-05fe-4937-82aa-b38eee350f21.mp4
+  
+  </details>
 
 # CAN Filtering
 
@@ -16,9 +22,9 @@ This document gives a higher-level overview of how the filtering process works f
 
 Filtering CAN message is the process on the receiving end of a node where message identifiers are used to decide which messages the node wants to keep and discard.
 
-<p align="center"><img src="assets/can_frame.png" /></p>
+<p align="center"><img src="assets/can_frame.jpg" /></p>
 
-_The components of a CAN data frame. These are what make up the CAN messages sent across the bus. The 11 bit ID is what we use to filter messages._
+<p align="center"><em>The components of a CAN data frame. These are what make up the CAN messages sent across the bus. The 11 bit ID is what we use to filter messages.</em></p>
 
 ### Implementation In Code
 
@@ -28,11 +34,11 @@ To start, a CAN filter structure is defined by the user. The filtering process i
 
 <p align="center"><img src="assets/struct.png" /></p>
 
-_The members of the CAN\_FilterTypeDef struct._
+<p align="center"><em>The members of the CAN_FilterTypeDef struct.</em></p>
 
 <p align="center"><img src="assets/setup.png" /></p>
 
-_Example code for a function that assigns values to the members of CAN\_filter0 which is a CAN\_FilterTypeDef struct. Note that the code uses a combination of 2 filter banks, the first set in mask mode and the second set in list mode._
+<p align="center"><em>Example code for a function that assigns values to the members of CAN_filter0 which is a CAN_FilterTypeDef struct. Note that the code uses a combination of 2 filter banks, the first set in mask mode and the second set in list mode.</em></p>
 
 ### Filters
 
@@ -42,7 +48,7 @@ The first 11 bits of a 16 bit filter are used for the ID. The bits of the ID wou
 
 <p align="center"><img src="assets/shift.png" /></p>
 
-_Bit shifting a 16 bit ID over by 5._
+<p align="center"><em>Bit shifting a 16 bit ID over by 5</em></p>
 
 ### Filter Scale
 
@@ -55,7 +61,7 @@ To be more technical than saying &quot;a filter is essentially 64 bits of space&
 
 <p align="center"><img src="assets/bits.png" /></p>
 
-_STM32 documentation showing the different ways to configure those 64 total bits._
+<p align="center"><em>STM32 documentation showing the different ways to configure those 64 total bits.</em></p>
 
 ### List Mode (16 bit scale)
 
@@ -65,7 +71,7 @@ For demonstration purposes, the 2 following sudo code blocks are very similar:
 
 <p align="center"><img src="assets/list_mode.png" /></p>
 
-_Example of filtering 4 different IDs with list mode._
+<p align="center"><em>Example of filtering 4 different IDs with list mode.</em></p>
 
 ### Not Using All the Filters (List Mode)
 
@@ -75,7 +81,7 @@ Continuing from the example above, if only 2 IDs needed to be filtered, the code
 
 <p align="center"><img src="assets/duplicate_filters.png" /></p>
 
-_Example of filtering 2 different IDs with list mode._
+<p align="center"><em>Example of filtering 2 different IDs with list mode.</em></p>
 
 
 ### Mask Mode (16 bit scale)
@@ -104,7 +110,7 @@ Similar to the section on not using all the filters in list mode, in mask mode, 
 
 <p align="center"><img src="assets/duplicate_filters_mask.png"/></p>
 
-_The high mask and filter are used to filter a range of IDs. Since the low mask and filter were not used, the same filter was used twice to fill in the empty space._
+<p align="center"><em>The high mask and filter are used to filter a range of IDs. Since the low mask and filter were not used, the same filter was used twice to fill in the empty space.</em></p>
 
 
 ### Filter Banks
@@ -113,4 +119,4 @@ From the section about filter scale, we know that a single filter has a total of
 
 <p align="center"><img src="assets/multiple_filters.png" /></p>
 
-_Driver Interface Display (DID) filtering uses 2 filter banks to accommodate for a large number of received CAN IDs. Remember to configure both after assigning values to the structures._
+<p align="center"><em>Driver Interface Display (DID) filtering uses 2 filter banks to accommodate for a large number of received CAN IDs. Remember to configure both after assigning values to the structures.</em></p>
