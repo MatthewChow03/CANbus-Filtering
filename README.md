@@ -1,6 +1,6 @@
 # CAN Filtering
 
-- Page 653/1134 of [STM Reference Manual](https://www.st.com/resource/en/reference_manual/cd00171190-stm32f101xx-stm32f102xx-stm32f103xx-stm32f105xx-and-stm32f107xx-advanced-arm-based-32-bit-mcus-stmicroelectronics.pdf()) - How CAN Works in Detail
+- Page 653/1134 of [STM Reference Manual](https://www.st.com/resource/en/reference_manual/cd00171190-stm32f101xx-stm32f102xx-stm32f103xx-stm32f105xx-and-stm32f107xx-advanced-arm-based-32-bit-mcus-stmicroelectronics.pdf) - How CAN Works in Detail
 - Page 90/2173 of [HAL documentation](https://www.st.com/resource/en/user_manual/dm00105879-description-of-stm32f4-hal-and-ll-drivers-stmicroelectronics.pdf) - Available HAL Functions etc.
 
 ### About the Document
