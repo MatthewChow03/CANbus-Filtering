@@ -14,9 +14,9 @@ https://user-images.githubusercontent.com/74833839/148348464-fb7494e2-05fe-4937-
 - Page 653/1134 of [STM Reference Manual](https://www.st.com/resource/en/reference_manual/cd00171190-stm32f101xx-stm32f102xx-stm32f103xx-stm32f105xx-and-stm32f107xx-advanced-arm-based-32-bit-mcus-stmicroelectronics.pdf) - How CAN Works in Detail
 - Page 90/2173 of [HAL documentation](https://www.st.com/resource/en/user_manual/dm00105879-description-of-stm32f4-hal-and-ll-drivers-stmicroelectronics.pdf) - Available HAL Functions etc.
 
-### About the Document
+### About this Document
 
-This document gives a higher-level overview of how the filtering process works for CAN. The document partially goes into the implementations of CAN filtering using firmware in STM32.
+This document gives a high-level overview of how the filtering process works for CAN firmware in STM32.
 
 ### General
 
